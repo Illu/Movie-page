@@ -1,0 +1,205 @@
+//compileCompressed: ../css/style.css
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+$navBackground: rgb(34, 34, 34)
+$navTopHeight: 80px
+$lineColor: rgb(91, 101, 110)
+$titleColor: #aaa
+
+body
+  margin: 0
+  padding: 0
+  border: 0
+  background: #333
+  font-family: 'Open Sans', sans-serif
+
+.navBarTop
+  height: $navTopHeight
+  width: 100%
+  background: $navBackground
+  position: fixed
+  margin-top: 0px
+  z-index: 100
+
+.logoTop
+  height: 20px
+  display: block
+  margin: auto
+  margin-top: ($navTopHeight - 20px) / 2
+
+
+.getTicketsButton
+  background: rgb(244, 220, 56)
+  border-radius: 100px
+  padding: 10px 30px 10px 30px
+  position: absolute
+  letter-spacing: 2px
+  font-weight: bold
+  right: 20px
+  top: 20px
+  cursor: pointer
+
+
+// hero components
+
+.hero
+  // height: 100vh
+  background: #333
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../imgs/Beach_Background.jpg')
+  // background-image: url('../imgs/Beach_Background.jpg')
+  background-size: cover
+
+.heroTitle
+  max-width: 60%
+  margin-left: auto
+  margin-right: auto
+  left: 0
+  right: 0
+  padding-top: 200px
+  padding-bottom: 50px
+
+.scrollInfo
+  color: $titleColor
+  text-align: center
+  padding: 20px
+  letter-spacing: 3px
+
+.line
+  background: $lineColor
+  width: 1px
+  margin: 0 auto
+
+.centerLine
+  @extend .line
+  height: 40vh
+
+.smallLine
+  @extend .line
+  height: 60px
+
+// video section
+
+#videoCarousel
+  max-width: 800px
+  display: block
+  margin: 0 auto
+  z-index: 1
+
+.carousel-control.left, .carousel-control.right
+    background-image: none
+
+.videos
+  background: #222
+
+//applied to every video iframe
+.video
+  display: block
+  margin: 0 auto
+  padding: 20px
+  border: 1px solid $lineColor
+
+.sectionTitle
+  color: $titleColor
+  letter-spacing: 20px
+  font-size: 2em
+  display: block
+  // margin-right: -20px
+
+.leftTitle
+  @extend .sectionTitle
+  margin-left: 50%
+
+.rightTitle
+  @extend .sectionTitle
+  //margin-left: 50%
+  //transform: translate(-38%, 0)
+  text-align: right
+
+// needed to align text correctly.
+.rightTitleBox
+  width: 50%
+
+// synopsis section
+
+.synopsis
+  background: rgb(20, 28, 33)
+
+// left section
+
+.infoLeft
+  display: inline-block
+  text-align: right
+  width: 50%
+  margin-top: 30%
+
+.infoRight
+  margin-left: 1%
+  display: inline-block
+
+.info
+  padding: 5px
+  color: $titleColor
+
+.deathStar
+  display: block
+  border-radius: 100%
+  padding: 20px
+  border: 1px solid $lineColor
+  margin-left: auto
+  margin-right: auto
+
+.resume
+  // position: absolute
+  color: $titleColor
+  margin-right: 10%
+  margin-top: 40%
+  display: table
+  height: 100px
+
+.resume p
+  display: table-cell
+  vertical-align: middle
+
+//Cast section
+
+.cast
+  background: rgb(20, 28, 33)
+
+.actorGroup
+  text-align: center
+  // display: flex
+  // flex-direction: row
+  // flex-wrap: nowrap
+  // justify-content: space-between
+
+  // margin: 0 auto
+
+.actorInfo
+  display: inline-block
+  text-align: center
+  // margin: 0 auto
+  margin: 0px 25px
+  color: $titleColor
+
+.actorImg
+  border-radius: 100%
+  display: block
+  width: 100px
+  height: 100px
+  padding: 10px
+  border: 1px solid $lineColor
+  margin: 0 auto
+
+.actorLeft
+  float: left
+
+.actorRight
+  float: right
+
+.actorMiddle
+  margin: 0 auto
+
+#castCarousel
+  @extend #videoCarousel
+  padding-bottom: 80px

@@ -1,0 +1,120 @@
+//output: index.html
+head
+  link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+  link(rel='stylesheet' href='css/style.css')
+  title Rogue One: A Star Wars Story
+
+body
+  //- navbar
+  .navBarTop
+    img(src='imgs/Star_Wars_Logo.png').logoTop
+    .getTicketsButton GET TICKETS
+
+  //- hero
+  .hero
+    img(src='imgs/Rogue_One_Logo.png').heroTitle.img-responsive
+    .scrollInfo SCROLL TO EXPLORE
+    .centerline
+
+  .videos
+    .smallLine
+    .leftTitle VIDEOS
+    .smallLine
+
+    #videoCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li(data-target='#videoCarousel' data-slide-to='1')
+        li(data-target='#videoCarousel' data-slide-to='2')
+        li(data-target='#videoCarousel' data-slide-to='3')
+      .carousel-inner(role='listbox')
+        .item.active
+          iframe(width="520" height="330" src="https://www.youtube.com/embed/frdj1zb9sMY?color=white&iv_load_policy=3&showinfo=0" frameborder="0").video
+          .carousel-caption
+            p Rogue One: A Star Wars Story Trailer (Official)
+        .item
+          iframe(width="520" height="330" src="https://www.youtube.com/embed/YWNvdoRnNv8?color=white&iv_load_policy=3&showinfo=0" frameborder="0").video
+          .carousel-caption
+            p Rogue One: A Star Wars Story : "Trust"
+        .item
+          iframe(width="520" height="330" src="https://www.youtube.com/embed/sC9abcLLQpI?color=white&iv_load_policy=3&showinfo=0" frameborder="0").video
+          .carousel-caption
+            p Rogue One: A Star Wars Story Trailer 2 (Official)
+      a(href='#videoCarousel' role='button' data-slide='prev').left.carousel-control
+        span(aria-hidden='true').glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a(href='#videoCarousel' role='button' data-slide='next').right.carousel-control
+        span(aria-hidden='true').glyphicon.glyphicon-chevron-right
+        span.sr-only Next
+
+    .smallLine
+
+  .synopsis
+    .smallLine
+    .rightTitleBox
+      .rightTitle SYNOPSIS
+    .smallLine
+
+    .container-fluid
+      .col-md-4
+        .infoLeft
+          .info RELEASE DATE:
+          .info DIRECTOR:
+          .info RUNNING TIME:
+          .info FILM SERIES:
+          .info MUSIC COMPOSED:
+        .infoRight
+          .info December 16, 2016
+          .info Gareth Edwards
+          .info 2h 13m
+          .info Star Wars
+          .info Michael Giacchino
+      .col-md-4
+        img(src='imgs/Death_Star.png').deathStar.img-responsive
+      .col-md-4
+        .resume: p From Lucasfilm comes the first of the Star Wars standalone films, "Rogue One: A Star Wars Story," an all-new epic adventure. In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.
+    .smallLine
+
+  .cast
+    .smallLine
+    .leftTitle CAST
+    .smallLine
+    #castCarousel.carousel.slide(data-ride='carousel')
+      .carousel-inner(role='listbox')
+        .item.active
+          .actorGroup
+            .actorInfo
+              img(src='imgs/Felicity_Jones.jpg').actorImg
+              h3 Felicity Jones
+              p Jyn Erso
+            .actorInfo
+              img(src='imgs/Diego_Luna.jpg').actorImg
+              h3 Diego Luna
+              p Cassian Andor
+            .actorInfo
+              img(src='imgs/Donnie_Yen.jpg').actorImg
+              h3 Donnie Yen
+              p Chirrut Imwe
+        .item
+          .actorGroup
+            .actorInfo
+              img(src='imgs/Alan_Tudyk.jpg').actorImg
+              h3 Alan Tudyk
+              p K-2SO
+            .actorInfo
+              img(src='imgs/Ben_Mendelsohn.jpg').actorImg
+              h3 Ben Mendelsohn
+              p Orson Krennic
+            .actorInfo
+              img(src='imgs/Mads_Mikkelsen.jpeg').actorImg
+              h3 Mads Mikkelsen
+              p Galen Erso
+      a(href='#castCarousel' role='button' data-slide='prev').left.carousel-control
+        span(aria-hidden='true').glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a(href='#castCarousel' role='button' data-slide='next').right.carousel-control
+        span(aria-hidden='true').glyphicon.glyphicon-chevron-right
+        span.sr-only Next
+
+
+script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
