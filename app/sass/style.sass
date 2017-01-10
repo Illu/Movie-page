@@ -203,3 +203,31 @@ body
 #castCarousel
   @extend #videoCarousel
   padding-bottom: 80px
+
+//mobile modifs.
+@media screen and (max-width: 600px)
+  .logoTop
+    display: none
+
+  .getTicketsButton
+    position: relative
+    width: 100%
+    height: $navTopHeight
+    border-radius: 0%
+    text-align: center
+    line-height: $navTopHeight
+    margin: 0px auto
+    top: 0px
+    right: 0px
+    padding: 0px 0px
+
+@media screen and (max-width: 1200px)
+  .infoLeft
+    margin-top: 2%
+    margin-bottom: 5%
+
+  .resume
+    margin-top: 5%
+    margin-bottom: 5%
+    text-align: center
+    margin: 0 auto
